@@ -40,3 +40,4 @@ application.properties
 mvnw.cmd
 .mvn
 /node_modules
+.env
