@@ -51,7 +51,7 @@ immediately after setup.
 Clone the Repository
 
 ```
-   https://github.com/Andrii-Kosteniuk/Resource-Management-System.git
+git clone https://github.com/Andrii-Kosteniuk/Resource-Management-System.git
 ```
 
 _**Set Up Environment Variables**_\
@@ -167,3 +167,65 @@ _**User Roles & Permissions:**_
 
 12.Editing existing product
 ![Logout](src/main/resources/static/images/Logout.jpg)
+
+### ✅ What's New
+
+🔀 Docker Support Branch
+
+🛠️ Prerequisites \
+Before running this project, make sure you have the following installed:
+
+[Docker](https://www.docker.com/) (required)
+
+Docker Compose (usually included with [Docker Desktop](https://www.docker.com/products/docker-desktop/))
+
+📦 Docker is needed to run this application in a containerized environment. 
+If you don't have it yet, follow the steps below to install.
+
+💻 Install Docker For Windows / macOS
+1. Download and install Docker Desktop:
+👉 https://www.docker.com/products/docker-desktop
+
+2. Start Docker Desktop and make sure it is running.
+
+🧪 Verifying Installation
+Run:
+
+``` sh
+docker --version
+docker-compose --version
+```
+You should see version outputs for both.
+
+🚀 How to Test this branch \
+You can test the Dockerized setup by following these steps:
+
+1. Clone the repository and switch to this branch:
+
+```
+git clone https://github.com/Andrii-Kosteniuk/Resource-Management-System.git
+cd your-repo-name/Resource-Management-System
+git checkout docker-feature
+```
+
+2. Create a .env file in the root directory:
+
+``` properties
+POSTGRES_DB=your_db_name
+POSTGRES_USER=your_db_username
+POSTGRES_PASSWORD=your_db_password
+DB_NAME=your_db_name
+DB_USERNAME=your_db_username
+DB_PASSWORD=your_db_password
+```
+3. Build the application using Maven:
+``` sh
+mvn clean install
+```
+4. Run the application using Docker Compose:
+
+```sh
+docker-compose up
+```
+
+4.Access the app: http://localhost:8081
